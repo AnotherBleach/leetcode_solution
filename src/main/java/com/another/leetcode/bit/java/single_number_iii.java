@@ -1,4 +1,4 @@
-package com.another.leetcode.Bit.java;
+package com.another.leetcode.bit.java;
 
 import java.util.Arrays;
 

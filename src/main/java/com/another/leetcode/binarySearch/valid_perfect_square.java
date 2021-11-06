@@ -10,7 +10,7 @@ public class valid_perfect_square {
             long tmp = mid * mid;
             if (tmp == num) {
                 return true;
-            } else if ( tmp > num) {
+            } else if (tmp > num) {
                 r = (int) (mid - 1);
             } else {
                 l = (int) (mid + 1);
@@ -18,6 +18,18 @@ public class valid_perfect_square {
         }
 
         return false;
+
+    }
+
+    public boolean isPerfectSquareV2(int num) {
+
+        for (int i = 1; ; i++) {
+            int j = i * i;
+
+            if (j == num) return true;
+            if (j > num || j < 0) return false;
+
+        }
 
     }
 

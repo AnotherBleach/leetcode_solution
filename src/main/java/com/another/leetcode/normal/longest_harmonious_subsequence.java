@@ -1,9 +1,36 @@
 package com.another.leetcode.normal;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class longest_harmonious_subsequence {
+
+    // 双指针
+    public int findLHS2(int[] nums) {
+
+        Arrays.sort(nums);
+        int ans = 0;
+        for (int i = 0, j = 1; j < nums.length; ) {
+
+            while (j < nums.length && nums[j] - nums[i] == 0) j++;
+            if(j==nums.length)return ans;
+
+            if(nums[j]-nums[i]!=1){
+                i=j;
+                j=j+1;
+            }else{
+                int q=j;
+                while(j<nums.length && nums[j]-nums[i]==1)j++;
+                ans=Math.max(ans,j-i);
+                i=q;
+            }
+
+        }
+        return ans;
+    }
+
+    // hash计数
     public int findLHS(int[] nums) {
 
         Map<Integer, Integer> data = new HashMap<>();
@@ -27,5 +54,9 @@ public class longest_harmonious_subsequence {
         }
         return small == big ? 0 : data.get(small) + data.get(big);
 
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new longest_harmonious_subsequence().findLHS2(new int[]{3,2,2,3,2,1,3,3,3,-2,0,3,2,1,0,3,1,0,1,3,0,3,3}));
     }
 }

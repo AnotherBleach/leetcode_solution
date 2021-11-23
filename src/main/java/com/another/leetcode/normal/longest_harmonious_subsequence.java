@@ -57,6 +57,7 @@ public class longest_harmonious_subsequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(new longest_harmonious_subsequence().findLHS2(new int[]{3,2,2,3,2,1,3,3,3,-2,0,3,2,1,0,3,1,0,1,3,0,3,3}));
+        System.out.printf(Integer.toBinaryString(27));
+        //System.out.println(new longest_harmonious_subsequence().findLHS2(new int[]{3,2,2,3,2,1,3,3,3,-2,0,3,2,1,0,3,1,0,1,3,0,3,3}));
     }
 }

@@ -27,8 +27,6 @@ public class reconstruct_original_digits_from_english {
             }
 
         }
-
-
         char[] result = answer.toString().toCharArray();
         Arrays.sort(result);
         return new String(result);

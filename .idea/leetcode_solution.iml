@@ -16,5 +16,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Python 3.8 (pytorch) interpreter library" level="application" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../Lib/opencv/opencv/build/java/opencv-3416.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../Lib/opencv/opencv/build/java/opencv-3416.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

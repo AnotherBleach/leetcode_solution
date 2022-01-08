@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class gray_code {
+    // 方法一： 通过直接排列得到
     public List<Integer> grayCode(int n) {
         int x = 0;
         boolean last = true;
@@ -25,10 +26,10 @@ public class gray_code {
                     if (isOne(x, i)) {
 
                         if (isOne(x, i + 1)) {
-                            int t = (1 << (i+1));
+                            int t = (1 << (i + 1));
                             x &= (~t);
                         } else {
-                            int t = (1 << (i+1));
+                            int t = (1 << (i + 1));
                             x |= t;
 
                         }
@@ -48,7 +49,23 @@ public class gray_code {
         return (((n >> i)) & 1) == 1;
     }
 
+
+    // 方法二： 通过镜像得到
+    public List<Integer> grayCodeV2(int n) {
+        List<Integer> data = new ArrayList<>();
+        data.add(0);
+        data.add(1);
+        for (int i = 2; i <= n; i++) {
+            int size = data.size();
+            for (int j = size-1; j >= 0; j--) {
+                data.set(j,data.get(j)<<1);
+                data.add(data.get(j)+1);
+            }
+        }
+        return data;
+    }
+
     public static void main(String[] args) {
-        System.out.println(new gray_code().grayCode(1));
+        System.out.println(new gray_code().grayCodeV2(2));
     }
 }

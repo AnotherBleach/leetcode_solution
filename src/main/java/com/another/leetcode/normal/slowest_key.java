@@ -1,7 +1,10 @@
 package com.another.leetcode.normal;
 
+import java.util.Stack;
+
 public class slowest_key {
     public char slowestKey(int[] releaseTimes, String keysPressed) {
+        Stack<Integer> data;
         int max = releaseTimes[0];
         char c = keysPressed.charAt(0);
         int temp;

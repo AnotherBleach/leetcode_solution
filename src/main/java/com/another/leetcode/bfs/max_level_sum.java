@@ -1,7 +1,7 @@
 package com.another.leetcode.bfs;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
+import java.util.function.ToIntFunction;
 
 public class max_level_sum {
 
@@ -59,4 +59,15 @@ class Solution {
         return level;
 
     }
+
+    public static void main(String[] args) {
+        String a = "123";
+        String b="123";
+        String c=new String("123");
+        System.out.printf("%x %x %x",a.hashCode(),b.hashCode(),c.hashCode());
+        List<Integer> data = new ArrayList<>();
+
+    }
+
+ 
 }

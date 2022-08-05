@@ -8,6 +8,10 @@ class TreeNode {
     TreeNode(int x) {
         val = x;
     }
+
+    public TreeNode() {
+
+    }
 }
 
 public class lowest_common_ancestor_of_a_binary_tree {

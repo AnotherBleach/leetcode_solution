@@ -8,6 +8,35 @@ public class robot {
 }
 
 class Solution3333333 {
+    int[][]move = new int[][]{{-1,0},{1,0},{0,1},{0,-1}};
+
+    //dfs
+    public int movingCount2(int m,int n,int k){
+        if(k==0)return 1;
+        return travel(0,0,m,n,k,new boolean[m][n]);
+    }
+
+    private int travel(int currentX, int currentY, int m, int n, int k, boolean[][] visited) {
+        if(visited[currentX][currentY])return 0;
+        int ans=1;
+        visited[currentX][currentY]=true;
+        for(int i=0;i<move.length;i++){
+            int x=currentX+move[i][0];
+            int y=currentY+move[i][1];
+            if(x<0||y<0||x>=m||y>=n||visited[x][y])continue;
+
+            if(isOk(x,y,k)){
+
+                ans+=travel(x,y,m,n,k,visited);
+
+            }
+
+        }
+        return ans;
+    }
+
+
+    //bfs
     public int movingCount(int m, int n, int k) {
         if(k==0)return 1;
         boolean[][]visited = new boolean[m][n];

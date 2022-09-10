@@ -1,5 +1,8 @@
 package com.another.leetcode.dfs;
 
+import com.another.leetcode.bfs.TreeNode;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class print_binary_tree {
@@ -19,7 +22,7 @@ public class print_binary_tree {
  *     }
  * }
  */
-class Solution {
+class Solution2222222222 {
     public List<List<String>> printTree(TreeNode root) {
         int height = getHeight(root)-1;
         int row=height+1;

@@ -19,7 +19,7 @@ public class YYS {
             TimeUnit.SECONDS.sleep(1);
             d++;
         }
-        int x=1818,y=966;
+        int x=2249,y=685;
 
         Robot robot = new Robot();
         Random rd = new Random();
@@ -35,17 +35,6 @@ public class YYS {
             TimeUnit.SECONDS.sleep(1);
             System.out.println("完成一轮");
 
-            robot.mouseMove(892,972);
-            TimeUnit.SECONDS.sleep(rd.nextInt(2)+5);
-            robot.mousePress(KeyEvent.BUTTON1_DOWN_MASK);
-            robot.delay(rd.nextInt(2000));
-            robot.mouseRelease(KeyEvent.BUTTON1_DOWN_MASK);
-
-
-            TimeUnit.SECONDS.sleep(10+3*60);
-            robot.mousePress(KeyEvent.BUTTON1_DOWN_MASK);
-            robot.delay(rd.nextInt(2000));
-            robot.mouseRelease(KeyEvent.BUTTON1_DOWN_MASK);
 //
         }
     }
